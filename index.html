@@ -1,0 +1,199 @@
+<html>
+<head>
+    <title>Lofty Service</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar" id="mainSidebar">
+            <div class="sidebar-content" id="loginSidebarContent">
+                <div class="sidebar-text">
+                    <h2>Your partner for the best e-commerce services</h2>
+                    <p>At Lofty Service, we efficiently manage all your operations, from product import to delivery, to ensure your success in the Middle East's most prominent markets.</p>
+                </div>
+                <img src="img/LoginSidebar.jpeg" alt="E-commerce graphic" class="sidebar-graphic">
+            </div>
+
+            <div class="sidebar-content" id="registrationSidebarContent" style="display:none;">
+                <div class="header">
+                    <h2 id="sidebarTitle">Welcome to Lofty Service</h2>
+                    <p id="sidebarSubtitle">You have 3 steps to register on the platform</p>
+                    <div class="progress-line">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <ul class="steps-indicator steps">
+                    <li class="step-item active" data-step="0">
+                        <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                        <div class="info">
+                            <span>Login</span>
+                            <p>Enter your email</p>
+                        </div>
+                    </li>
+                    <li class="step-item" data-step="1">
+                        <div class="icon-circle"><i class="fas fa-info-circle"></i></div>
+                        <div class="info">
+                            <span>Personal Information</span>
+                            <p>Name, lineage, City</p>
+                        </div>
+                    </li>
+                    <li class="step-item" data-step="2">
+                        <div class="icon-circle"><i class="fas fa-check-circle"></i></div>
+                        <div class="info">
+                            <span>Your e-commerce details</span>
+                            <p>Details about your trade</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="back-to-login">
+                    <a href="#" id="showLoginFromSidebar">
+                        <img class="arrow" src="img/arrow.png" alt="Back arrow"> Back to Login Page
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-header">
+                <div class="logo">
+                    <img src="img/logo.png" alt="LoftyService Logo">
+                </div>
+                <div class="language">
+                    <select>
+                        <option value="ar">AR</option>
+                        <option value="en" selected>EN</option>
+                        <option value="tr">TR</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="Switch-buttons" id="switchButtons">
+                    <button id="showLoginBtn" class="active">Login</button>
+                    <button id="showRegisterBtn">Register</button>
+                </div>
+
+                <div id="loginSection" class="form-section active">
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="loginPassword">Password</label>
+                            <div class="password-input-wrapper">
+                                <input type="password" id="loginPassword" name="password" required>
+                                <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="main-btn">Login</button>
+                        <p class="switch-form">Don't have an account? <a href="#" id="createAccountLink">Sign up now for free</a></p>
+                    </form>
+                </div>
+
+                <div id="registerSection" class="form-section">
+                    <form id="registerForm">
+                        <div class="register-step" data-step="0">
+                            <div class="input-group">
+                                <label for="regEmail">Email Address</label>
+                                <input type="email" id="regEmail" name="email" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="regPassword">Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="regPassword" name="password" placeholder="Enter your password" required>
+                                    <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="confirmPassword">Password Confirmation</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="password Confirmation" required>
+                                    <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="next-step-btn main-btn">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="register-step" data-step="1">
+                            <div class="input-row">
+                                <div class="input-group half-width">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                                </div>
+                                <div class="input-group half-width">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group half-width">
+                                    <label for="phone">Phone *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder=" Enter your phone" required>
+                                </div>
+                                <div class="input-group half-width">
+                                    <label for="whatsapp">WhatsApp *</label>
+                                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="Enter WhatsApp ">
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group half-width">
+                                    <label for="businessName">Business Name *</label>
+                                    <input type="text" id="businessName" name="businessName" placeholder="Enter store name">
+                                </div>
+                                <div class="input-group half-width">
+                                    <label for="country">Country *</label>
+                                    <input type="text" id="country" name="country" placeholder="Enter your country" required>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group half-width">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                                </div>
+                                <div class="input-group half-width">
+                                    <label for="address">Address *</label>
+                                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                                </div>
+                            </div>
+                            <p class="required-fields">* Required fields</p>
+                            <div class="form-actions">
+                                <button type="button" class="prev-step-btn secondary-btn">Back</button>
+                                <button type="button" class="next-step-btn main-btn">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="register-step" data-step="2">
+                            <p class="welcome-message">Welcome [Username] to Lofty Services</p>
+                            <p>You are now in the final step. These questions will help us guide you to the service that suits your business needs.</p>
+                            <div class="source-options">
+                               <div class="checkbox-grid">
+                                <h4>Where did you hear about us?</h4> <label><input type="checkbox" name="source" value="instagram"><i class="fab fa-instagram"></i> Instagram</label>
+                                <label><input type="checkbox" name="source" value="ads"><i class="fas fa-ad"></i> Ads (Google, Facebook)</label>
+                                <label><input type="checkbox" name="source" value="facebook"><i class="fab fa-facebook-f"></i> Facebook</label>
+                                <label><input type="checkbox" name="source" value="friends"><i class="fas fa-user-friends"></i> Friends or Family</label>
+                                <label><input type="checkbox" name="source" value="tiktok"><i class="fab fa-tiktok"></i> TikTok</label>
+                                <label><input type="checkbox" name="source" value="google"><i class="fab fa-google"></i> Google Search</label>
+                                <label><input type="checkbox" name="source" value="linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</label>
+                                <label><input type="checkbox" name="source" value="newsletter"><i class="fas fa-newspaper"></i> Newsletter</label>
+                                <label><input type="checkbox" name="source" value="youtube"><i class="fab fa-youtube"></i> YouTube</label>
+                            </div> 
+                            <div class="form-actions">
+                                <button type="button" class="skip-btn secondary-btn">Skip</button> 
+                                <button type="button" class="prev-step-btn secondary-btn">Back</button>
+                                <button type="submit" class="main-btn">Next</button> 
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
